@@ -1,0 +1,36 @@
+
+---
+# tasks file for apache
+
+    - name: update apt and install apache web server
+      apt:
+        name: apache2
+        update_cache: yes
+        state: latest
+      become: true
+
+    - name: start and enable apache service
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+
+    - name: create bash script to create html file in web server root directory
+      copy:
+        dest: /home/ubuntu/create_sample_html.sh
+        mode: 777
+        content: |
+          #!/bin/bash
+          echo "<html><body><h1>Hello, world! My name is Latefa</h1></body></html>" > /var/www/html/index.html
+
+    - name: run bash script to create html file
+      shell: sh /home/ubuntu/create_sample_html.sh
+      become: yes
+
+    - name: open firewall
+      ufw:
+        rule: allow
+        port: '80'
+        proto: tcp
+      become: yes
+      notify: restart apache

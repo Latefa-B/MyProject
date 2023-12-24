@@ -1,0 +1,8 @@
+---
+- name: run apache
+  hosts: all
+  roles:
+    - apache
+
+
+
