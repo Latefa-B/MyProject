@@ -148,7 +148,9 @@ role in tasks subdirectory, containing the tasks that will be executed.** the ta
 
 <img width="1120" alt="project_step29" src="https://github.com/Latefa-B/MyProject/assets/151809027/2b12b258-1932-4ecf-a1b9-58cf0cc04238">
 
+
 <img width="1179" alt="project_step30" src="https://github.com/Latefa-B/MyProject/assets/151809027/9b803dba-1a8e-4a74-92f2-ec7e1722b4c8">
+
 
 
 **Step31: the error regarding permissions allowed me to check my committed files, the bash script was not added to the staging area and commit, a second commit has been made to add it**
@@ -156,9 +158,11 @@ role in tasks subdirectory, containing the tasks that will be executed.** the ta
 <img width="749" alt="project_step31" src="https://github.com/Latefa-B/MyProject/assets/151809027/bd5b0f9f-872a-4e8d-badf-766ca6ab486e">
 
 
+
 **Step32: a conflict between my “main”  branch on my local repository and my “main” branch on my remote repository rejecting to push the project. merging both branches was rejected as well.**
 
 <img width="583" alt="project_step32" src="https://github.com/Latefa-B/MyProject/assets/151809027/8479127a-8963-463b-b048-071ab033d361">
+
 
 
 **Step33: to fix the branching conflict, I have created on my local repository a copy of the main branch : latefa-branch. that was pushed successfully to the remote one repository.**
@@ -166,8 +170,10 @@ role in tasks subdirectory, containing the tasks that will be executed.** the ta
 <img width="552" alt="project_step33" src="https://github.com/Latefa-B/MyProject/assets/151809027/3f7260fc-0b88-4cf1-94ab-69c236c16109">
 
 
+
 **Step34: the project is complete and pushed on “latefa-branch” on “MyProject” remote repository.**
 <img width="1333" alt="project_step34" src="https://github.com/Latefa-B/MyProject/assets/151809027/22fea159-d795-4dc4-ab59-f4874b7ec8a0">
+
 
 
 To conclude, Deploying the project using ansible as an automation tool and git as a VCS tool together, has many benefits most importantly : idempotency, automating, monitoring and maintaining system consistency across environments, reducing manual tasks, tracking and managing changes to the infrastructure code as needed. 
