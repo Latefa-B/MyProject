@@ -40,6 +40,7 @@ Below are the steps that i have taken to complete the project:
 <img width="1369" alt="project_step6" src="https://github.com/Latefa-B/MyProject/assets/151809027/2f5c84f8-ba4a-4f10-a8d3-c2f6d6a75860">
 
 
+
 **Steps 7, 8, 9 and 10: create an ansible configuration file and an inventory file containing the targets ip addresses**
 
 <img width="366" alt="project_step7" src="https://github.com/Latefa-B/MyProject/assets/151809027/70bd345f-79e6-42e1-ba4b-7aa873a86ca9">
@@ -100,5 +101,67 @@ role in tasks subdirectory, containing the tasks that will be executed.** the ta
 
 
 <img width="1012" alt="project_step21" src="https://github.com/Latefa-B/MyProject/assets/151809027/4e09b95f-fb33-43fa-8647-8515d0425f7d">
+
+
+## Part II: managing the changes and sharing the project using VSC Git system on the Github platform
+
+**Steps 22: create a new Github repository ‘’MyProject” on my Github account**
+
+Step23: create a new Git repository on my project directory, using the command git init
+<img width="685" alt="project_step23" src="https://github.com/Latefa-B/MyProject/assets/151809027/3962808f-a939-4f49-a266-6c17a1e3285c">
+
+Step24: add to the staging area all at once all the documents in the directory : inventory file (hosts), ansible configuration file, apache role and its subdirectories and files (playbook) and the bash script.
+<img width="415" alt="project_step24" src="https://github.com/Latefa-B/MyProject/assets/151809027/d58ac3e0-a44a-4b05-bf43-0163f1f06182">
+
+
+Step25: commit the project using the command git commit -m and add a message to it
+<img width="694" alt="project_step25" src="https://github.com/Latefa-B/MyProject/assets/151809027/a39f54d8-00f0-4321-927c-e42443680dc5">
+
+
+Steps 26 and 27: git amend command helped adding an authentication (username and email address )after committing the work as i have omit the git config step.
+
+<img width="526" alt="project_step26" src="https://github.com/Latefa-B/MyProject/assets/151809027/29e300cb-695a-433d-8e15-91f2510d3394">
+
+<img width="679" alt="project_step27" src="https://github.com/Latefa-B/MyProject/assets/151809027/ec969d7c-4df6-448c-a839-20e66e17da44">
+
+
+step 28: in this step i have : 
+- checked the history of the commit using the command git log
+- changed the name of my master branch to avoid branch conflict while pushing to the main branch on my remote github repository, using git branch -M main
+- added the remote repository to my local computer, using git remote add origin and confirmed it with the command git remote -v
+- when i have tried to push my project using the command git push -u origin main and error occurred regarding permissions denied. i realized then i have omit to add an ssh public key to connect to the github repository
+
+  <img width="692" alt="project_step28" src="https://github.com/Latefa-B/MyProject/assets/151809027/e3f0791c-7028-4f71-9cb4-7cdebbb340a9">
+
+
+Steps 29 and 30: instead of generating a new public key, I have used the current one existent in my ~/.ssh/id_rsa.pub and added it to the github repository “MyProject”
+
+<img width="1120" alt="project_step29" src="https://github.com/Latefa-B/MyProject/assets/151809027/2b12b258-1932-4ecf-a1b9-58cf0cc04238">
+
+<img width="1179" alt="project_step30" src="https://github.com/Latefa-B/MyProject/assets/151809027/9b803dba-1a8e-4a74-92f2-ec7e1722b4c8">
+
+
+Step31: the error regarding permissions allowed me to check my committed files, the bash script was not added to the staging area and commit, a second commit has been made to add it
+
+<img width="749" alt="project_step31" src="https://github.com/Latefa-B/MyProject/assets/151809027/bd5b0f9f-872a-4e8d-badf-766ca6ab486e">
+
+
+Step32: a conflict between my “main”  branch on my local repository and my “main” branch on my remote repository rejecting to push the project. merging both branches was rejected as well.
+
+<img width="583" alt="project_step32" src="https://github.com/Latefa-B/MyProject/assets/151809027/8479127a-8963-463b-b048-071ab033d361">
+
+
+Step33: to fix the branching conflict, I have created on my local repository a copy of the main branch : latefa-branch. that was pushed successfully to the remote one repository.
+
+<img width="552" alt="project_step33" src="https://github.com/Latefa-B/MyProject/assets/151809027/3f7260fc-0b88-4cf1-94ab-69c236c16109">
+
+
+Step34: the project is complete and pushed on “latefa-branch” on “MyProject” remote repository.
+<img width="1333" alt="project_step34" src="https://github.com/Latefa-B/MyProject/assets/151809027/22fea159-d795-4dc4-ab59-f4874b7ec8a0">
+
+
+To conclude, Deploying the project using ansible as an automation tool and git as a VCS tool together, has many benefits most importantly : idempotency, automating, monitoring and maintaining system consistency across environments, reducing manual tasks, tracking and managing changes to the infrastructure code as needed. 
+
+
 
 
