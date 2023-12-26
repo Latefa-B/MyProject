@@ -29,15 +29,19 @@ Below are the steps that i have taken to complete the project:
 <img width="788" alt="project_step3" src="https://github.com/Latefa-B/MyProject/assets/151809027/85719113-3a85-457f-8123-a26512d0223c">
 
 
-**Steps 4, 5 and 6 : configure ansible playbook to use the SSH key for authentication . Add the public key to authorized_keys file to establish the ssh connection**
+**Steps 4, 5 and 6 : Add a public key to authorized_keys file to establish the ssh connection**
 
 <img width="1377" alt="project_step4" src="https://github.com/Latefa-B/MyProject/assets/151809027/34424705-666b-4ceb-806d-76decb791eab">
+
 
 
 <img width="476" alt="project_step5" src="https://github.com/Latefa-B/MyProject/assets/151809027/6803040a-2b9e-4f45-94f5-3bc1a68e54e3">
 
 
+
+
 <img width="1369" alt="project_step6" src="https://github.com/Latefa-B/MyProject/assets/151809027/2f5c84f8-ba4a-4f10-a8d3-c2f6d6a75860">
+
 
 
 
@@ -70,6 +74,7 @@ hierarchical structure that organizes complex playbooks. The tree command shows 
 <img width="815" alt="project_step14" src="https://github.com/Latefa-B/MyProject/assets/151809027/4ac407b3-914c-42e2-8b31-084301a6ced7">
 
 
+
 **Step 15: create a YAML based file where all the tasks are defined to set up and configure the service. created in apache 
 role in tasks subdirectory, containing the tasks that will be executed.** the tasks involves : 
 
@@ -83,6 +88,7 @@ role in tasks subdirectory, containing the tasks that will be executed.** the ta
 <img width="793" alt="project_step15" src="https://github.com/Latefa-B/MyProject/assets/151809027/86ab7df9-c464-4c77-90d1-50d5206335e2">
 
 
+
 **Step 16: run the playbook successfully using the command ansible-playbook role.yaml. it has set up the apache software, created an index HTML file, allowed http port80 and automate the deployment**
 <img width="1079" alt="project_step16" src="https://github.com/Latefa-B/MyProject/assets/151809027/b6bb5fcf-66d9-445a-9f01-9289a648a2fb">
 
@@ -92,12 +98,15 @@ role in tasks subdirectory, containing the tasks that will be executed.** the ta
 **Step 18: allowing http port 80 on my AWS EC2 instances**
 <img width="1356" alt="project_step18" src="https://github.com/Latefa-B/MyProject/assets/151809027/96437c10-e44d-4549-a4d5-6228cec07366">
 
+
 **Step 19: while testing the access to the web page, an error message occurred : “the server where this page is located is not responding”. the reason is i have used the private IP instead of the Public IP to access the web page**
 <img width="827" alt="project_step19" src="https://github.com/Latefa-B/MyProject/assets/151809027/1b33015e-e8c7-4e19-9380-b8bdb9c956c4">
+
 
 **Steps 20 and 21: after testing accessing the web page with the public IP address, the access was done successfully**
 
 <img width="835" alt="project_step20" src="https://github.com/Latefa-B/MyProject/assets/151809027/d121c00f-aca3-45e6-afc8-3b7134654f68">
+
 
 
 <img width="1012" alt="project_step21" src="https://github.com/Latefa-B/MyProject/assets/151809027/4e09b95f-fb33-43fa-8647-8515d0425f7d">
@@ -106,57 +115,58 @@ role in tasks subdirectory, containing the tasks that will be executed.** the ta
 ## Part II: managing the changes and sharing the project using VSC Git system on the Github platform
 
 **Steps 22: create a new Github repository ‘’MyProject” on my Github account**
+<img width="1335" alt="project_step22" src="https://github.com/Latefa-B/MyProject/assets/151809027/c66bb5eb-72d0-4b2f-bb5e-1df0ba9841c0">
 
-Step23: create a new Git repository on my project directory, using the command git init
+**Step23: create a new Git repository on my project directory, using the command git init**
 <img width="685" alt="project_step23" src="https://github.com/Latefa-B/MyProject/assets/151809027/3962808f-a939-4f49-a266-6c17a1e3285c">
 
-Step24: add to the staging area all at once all the documents in the directory : inventory file (hosts), ansible configuration file, apache role and its subdirectories and files (playbook) and the bash script.
+**Step24: add to the staging area all at once all the documents in the directory : inventory file (hosts), ansible configuration file, apache role and its subdirectories and files (playbook) and the bash script.**
 <img width="415" alt="project_step24" src="https://github.com/Latefa-B/MyProject/assets/151809027/d58ac3e0-a44a-4b05-bf43-0163f1f06182">
 
 
-Step25: commit the project using the command git commit -m and add a message to it
+**Step25: commit the project using the command git commit -m and add a message to it**
 <img width="694" alt="project_step25" src="https://github.com/Latefa-B/MyProject/assets/151809027/a39f54d8-00f0-4321-927c-e42443680dc5">
 
 
-Steps 26 and 27: git amend command helped adding an authentication (username and email address )after committing the work as i have omit the git config step.
+**Steps 26 and 27: git amend command helped adding an authentication (username and email address )after committing the work as i have omit the git config step.**
 
 <img width="526" alt="project_step26" src="https://github.com/Latefa-B/MyProject/assets/151809027/29e300cb-695a-433d-8e15-91f2510d3394">
 
 <img width="679" alt="project_step27" src="https://github.com/Latefa-B/MyProject/assets/151809027/ec969d7c-4df6-448c-a839-20e66e17da44">
 
 
-step 28: in this step i have : 
+**step 28: in this step i have :**
 - checked the history of the commit using the command git log
 - changed the name of my master branch to avoid branch conflict while pushing to the main branch on my remote github repository, using git branch -M main
 - added the remote repository to my local computer, using git remote add origin and confirmed it with the command git remote -v
 - when i have tried to push my project using the command git push -u origin main and error occurred regarding permissions denied. i realized then i have omit to add an ssh public key to connect to the github repository
 
-  <img width="692" alt="project_step28" src="https://github.com/Latefa-B/MyProject/assets/151809027/e3f0791c-7028-4f71-9cb4-7cdebbb340a9">
+<img width="692" alt="project_step28" src="https://github.com/Latefa-B/MyProject/assets/151809027/e3f0791c-7028-4f71-9cb4-7cdebbb340a9">
 
 
-Steps 29 and 30: instead of generating a new public key, I have used the current one existent in my ~/.ssh/id_rsa.pub and added it to the github repository “MyProject”
+**Steps 29 and 30: instead of generating a new public key, I have used the current one existent in my ~/.ssh/id_rsa.pub and added it to the github repository “MyProject”**
 
 <img width="1120" alt="project_step29" src="https://github.com/Latefa-B/MyProject/assets/151809027/2b12b258-1932-4ecf-a1b9-58cf0cc04238">
 
 <img width="1179" alt="project_step30" src="https://github.com/Latefa-B/MyProject/assets/151809027/9b803dba-1a8e-4a74-92f2-ec7e1722b4c8">
 
 
-Step31: the error regarding permissions allowed me to check my committed files, the bash script was not added to the staging area and commit, a second commit has been made to add it
+**Step31: the error regarding permissions allowed me to check my committed files, the bash script was not added to the staging area and commit, a second commit has been made to add it**
 
 <img width="749" alt="project_step31" src="https://github.com/Latefa-B/MyProject/assets/151809027/bd5b0f9f-872a-4e8d-badf-766ca6ab486e">
 
 
-Step32: a conflict between my “main”  branch on my local repository and my “main” branch on my remote repository rejecting to push the project. merging both branches was rejected as well.
+**Step32: a conflict between my “main”  branch on my local repository and my “main” branch on my remote repository rejecting to push the project. merging both branches was rejected as well.**
 
 <img width="583" alt="project_step32" src="https://github.com/Latefa-B/MyProject/assets/151809027/8479127a-8963-463b-b048-071ab033d361">
 
 
-Step33: to fix the branching conflict, I have created on my local repository a copy of the main branch : latefa-branch. that was pushed successfully to the remote one repository.
+**Step33: to fix the branching conflict, I have created on my local repository a copy of the main branch : latefa-branch. that was pushed successfully to the remote one repository.**
 
 <img width="552" alt="project_step33" src="https://github.com/Latefa-B/MyProject/assets/151809027/3f7260fc-0b88-4cf1-94ab-69c236c16109">
 
 
-Step34: the project is complete and pushed on “latefa-branch” on “MyProject” remote repository.
+**Step34: the project is complete and pushed on “latefa-branch” on “MyProject” remote repository.**
 <img width="1333" alt="project_step34" src="https://github.com/Latefa-B/MyProject/assets/151809027/22fea159-d795-4dc4-ab59-f4874b7ec8a0">
 
 
