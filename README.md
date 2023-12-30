@@ -18,7 +18,8 @@ During the process we will :
 Below are the steps that i have taken to complete the project: 
 
 **Step 1: set up the work infrastructure by creating AWS EC2 instances ( one controller node and two target nodes )**
-<img width="1153" alt="project_step1" src="https://github.com/Latefa-B/MyProject/assets/151809027/ae551c4c-c515-4625-ad29-9d274983c5b2">
+<img width="1071" alt="project_step1" src="https://github.com/Latefa-B/MyProject/assets/151809027/4d80bc75-f6a8-4bc1-90c3-3b73dd0fbf41">
+
 
 
 **Step 2: use ssh for a secure connection**
@@ -53,7 +54,8 @@ Below are the steps that i have taken to complete the project:
 <img width="867" alt="project_step8" src="https://github.com/Latefa-B/MyProject/assets/151809027/dee4706a-9388-42e6-8214-d92844555986">
 
 
-<img width="919" alt="project_step9" src="https://github.com/Latefa-B/MyProject/assets/151809027/c43b7d08-16b6-47ef-9ecf-2bcd99f6421a">
+<img width="569" alt="project_step9" src="https://github.com/Latefa-B/MyProject/assets/151809027/5160baeb-1acd-4746-92b9-c6dc3a12dc20">
+
 
 
 <img width="529" alt="project_step10" src="https://github.com/Latefa-B/MyProject/assets/151809027/e24330e1-46c3-4b9d-8b3e-0d87946b002e">
@@ -64,14 +66,17 @@ Below are the steps that i have taken to complete the project:
 
 **Step 12: create an ansible role for my project named “apache” using the command : ansible-galaxy init. The role is a 
 hierarchical structure that organizes complex playbooks. The tree command shows the structure of the role**
+
 <img width="507" alt="project_step12" src="https://github.com/Latefa-B/MyProject/assets/151809027/c11cfc0e-2ea6-47fe-945a-9a8c077ea7da">
 
 **Steps 13 and 14: create a role yaml file to run the role (including all the playbooks)**
 
-<img width="489" alt="project_step13" src="https://github.com/Latefa-B/MyProject/assets/151809027/b9ee020a-cb39-4598-a7cd-3f31134a17e3">
+<img width="483" alt="project_step13" src="https://github.com/Latefa-B/MyProject/assets/151809027/a8dbd50d-7a17-428a-9f79-0ffef2f5db99">
 
 
-<img width="815" alt="project_step14" src="https://github.com/Latefa-B/MyProject/assets/151809027/4ac407b3-914c-42e2-8b31-084301a6ced7">
+
+<img width="425" alt="project_step14" src="https://github.com/Latefa-B/MyProject/assets/151809027/2c166bc1-d0a8-424e-86da-1160e8a84738">
+
 
 
 
@@ -100,7 +105,8 @@ role in tasks subdirectory, containing the tasks that will be executed.** the ta
 
 
 **Step 19: while testing the access to the web page, an error message occurred : “the server where this page is located is not responding”. the reason is i have used the private IP instead of the Public IP to access the web page**
-<img width="827" alt="project_step19" src="https://github.com/Latefa-B/MyProject/assets/151809027/1b33015e-e8c7-4e19-9380-b8bdb9c956c4">
+<img width="827" alt="project_step19" src="https://github.com/Latefa-B/MyProject/assets/151809027/fe66f08b-da9a-4b0b-92e0-6acb53b428b4">
+
 
 
 **Steps 20 and 21: after testing accessing the web page with the public IP address, the access was done successfully**
